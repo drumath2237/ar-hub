@@ -2,14 +2,18 @@
 const props = defineProps<{
   title: string,
   link: string,
-  color: string
+  color: string,
+  sub: string
 }>();
 </script>
 
 <template>
   <div class="buttonWrapper">
     <a :href="props.link">
-      <button>{{ props.title }}</button>
+      <button>
+        <p class="title">{{ props.title }}</p>
+        <p class="sub">{{ props.sub }}</p>
+      </button>
     </a>
   </div>
 </template>
@@ -27,9 +31,18 @@ const props = defineProps<{
     button {
       width: 100%;
       height: 100%;
-      background-color: v-bind(color);
-      font-size: 1.4em;
+      background-color: #186fb6;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: white;
+      border-color: white;
+
+      .title {
+        font-size: 2em;
+      }
+
+      .sub {
+        font-size: 1.5em;
+      }
     }
   }
 }
