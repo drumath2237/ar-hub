@@ -1,30 +1,23 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import LinkButton from "./components/linkButton.vue"
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="wrapper">
+    <LinkButton title="H3(WebAR)" link="https://google.com" color="#d18ca3" />
+    <LinkButton title="H3(STYLY)" link="https://google.com" color="#b1c77b" />
+    <LinkButton title="SLIM(WebAR)" link="https://google.com" color="#88d2d2" />
+    <LinkButton title="SLIM(STYLY)" link="https://google.com" color="#b0dbf1" />
+    <LinkButton title="はやぶさ(WebAR)" link="https://google.com" color="#d69fc1" />
+    <LinkButton title="はやぶさ(STYLY)" link="https://google.com" color="#d18ca3" />
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+<style scoped lang="scss">
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100%;
 }
 </style>
